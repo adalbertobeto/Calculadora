@@ -1,7 +1,8 @@
 import sys
-from PySide6.QtWidgets import QApplication, QLabel
+from PySide6.QtWidgets import QApplication
 
 from main_window import Mainwindow
+from display import Display
 from PySide6.QtGui import QIcon
 from variaveis import WINDOW_ICON_PATH
 
@@ -15,10 +16,9 @@ if __name__ == "__main__":
     window.setWindowIcon(icon)
     app.setWindowIcon(icon)
 
-    txt = QLabel("O meu TEXTO")
-    txt.setStyleSheet("font-size: 150px;")
-    window.addWidgetToVLayout(txt)
-    window.adjustFixedSize()
+    # Display
+    display = Display()
+    window.addToVLayout(display)
 
     window.show()
     app.exec()
