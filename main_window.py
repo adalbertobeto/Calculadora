@@ -1,8 +1,4 @@
-from PySide6.QtWidgets import (
-    QMainWindow,
-    QVBoxLayout,
-    QWidget,
-)
+from PySide6.QtWidgets import QMainWindow, QVBoxLayout, QWidget
 
 
 class Mainwindow(QMainWindow):
@@ -22,3 +18,6 @@ class Mainwindow(QMainWindow):
         # ultima cois a ser feita
         self.adjustSize()
         self.setFixedSize(self.width(), self.height())
+
+    def addWidgetToVLayout(self, widget: QWidget):
+        self.v_layout.addWidget(widget)
