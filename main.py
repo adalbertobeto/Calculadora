@@ -29,7 +29,7 @@ if __name__ == "__main__":
     window.addWidgetToVLayout(display)
 
     # Grid de Botões
-    grade_botoes = ButtonsGrid()
+    grade_botoes = ButtonsGrid(display=display)
     window.vLayout.addLayout(grade_botoes)
 
     window.show()
